@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/myamazingwebsite/site.css" />
+  </head>
+  <body>
+
+    <ul>
+    {{#movies}}
+
+      <li>
+      {{! <form action="/delete-movie" method="POST"> }}
+      <form action="/delete-movie" method="POST">
+        {{title}}
+  
+        <input type="hidden" name="movieName" value="{{title}}"/>
+  
+
+        <input type="submit" value="Remove" />
+      </form>
+      </li>
+
+    {{/movies}}
+  </ul>
+
+
+  </body>
+</html>
